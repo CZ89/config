@@ -1,0 +1,28 @@
+spring:
+   application:
+      name: cloud-user
+
+server.port: 8001
+
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://127.0.0.1:8000/eureka
+feign:
+   hystrix:
+      enabled: true
+
+---
+spring:
+   profiles: user8005
+
+server:
+   port: 8005
+
+---
+spring:
+   profiles: user8006
+
+server:
+   port: 8006
+
